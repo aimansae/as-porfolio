@@ -1,0 +1,16 @@
+{
+  "navLinks": [
+    {
+      "label": "home",
+      "href": "/"
+    },
+    {
+      "label": "about me",
+      "href": "/about-me"
+    },
+    {
+      "label": "contact",
+      "href": "/contact"
+    }
+  ]
+}
