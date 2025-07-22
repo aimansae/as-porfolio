@@ -2,17 +2,17 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+In your VS Code terminal type 
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx create-next-app@latest .
+and follow the instructions:
+npx create-next-app@latest .
+
 ```
+
+![Installation](/public//assets/create-next-app.PNG)
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
