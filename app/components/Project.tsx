@@ -1,8 +1,8 @@
 "use client";
 
-import Link from "next/link";
 import React, { useState } from "react";
 import ProjectModal from "./ProjectModal";
+import P1 from "@/public/assets/saw.png";
 
 const Project = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -37,8 +37,21 @@ const Project = () => {
     setSelectedProject(projects[prevIndex].id);
   };
   const projects = [
-    { id: 1, title: "title1dcfg ", tags: ["React", "Tailwind", "CSS"] },
-    { id: 2, title: "title2sdf ", tags: ["React", "Tailwind", "CSS"] },
+    {
+      id: 1,
+      title: "title1dcfg ",
+      tags: ["React", "Tailwind", "CSS"],
+      description: "This project was made with ddfjvcskxmsdvf",
+      fullDescription: "Full description here ghdncdvf",
+      image: P1,
+      techStack: ["React", "Tailwind", "CSS"],
+    },
+    {
+      id: 2,
+      title: "title2sdf ",
+      tags: ["React", "Tailwind", "CSS"],
+      image: "./",
+    },
     { id: 3, title: "title3 ", tags: ["React", "Tailwind", "CSS"] },
     { id: 4, title: "title4 ", tags: ["React", "Tailwind", "CSS"] },
     { id: 5, title: "title5 ", tags: ["React", "Tailwind", "CSS"] },
@@ -47,34 +60,34 @@ const Project = () => {
   const project = projects.find((project) => project.id === selectedProject)!;
 
   return (
-    <section className="px-4 py-32 sm:px-6 lg:px-8 ">
+    <section className="  py-32  ">
       <h2 className="text-3xl font-bold text-white text-center mb-12">
         Featured projects
       </h2>
 
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {projects.map((project, i) => (
           <button
             onClick={() => handleProjectClick(project.id)}
-            className="hover:shadow-sm rounded-lg p-6 border border-gray-500/50 hover:border-purple-500/50 transition-colors backdrop:blur-sm bg-gray-600/30"
+            className="text-left hover:shadow-sm rounded-lg p-6 border border-gray-500/50 hover:border-purple-500/50 transition-colors backdrop:blur-sm bg-gray-600/30"
             key={i}
           >
-            <div className="flex flex-col h-full">
+            <div className="flex flex-col h-full w-full">
               <h3 className="text-lg font-semibold text-white mb-2">
                 {project.title}
               </h3>
-              <div className="flex flex-wrap gap-1 mt-auto">
-                {project.tags.map((tag, i) => (
-                  <span
-                    className="px-2 py-0.5 rounded-full text-xs bg-primary-500/20 text-purple-200 border border-purple-500/30  "
-                    key={i}
-                  >
-                    {tag}
-                  </span>
-                ))}
+                 <ul className="flex flex-wrap gap-1 mt-auto">
+                  {project.tags.map((tag, i) => (
+                    <li
+                      className="px-2 py-0.5 rounded-full text-xs bg-primary-500/20 text-purple-200 border border-purple-500/30  "
+                      key={i}
+                    >
+                      {tag}
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
-          </button>
+           </button>
         ))}
         {project && (
           <ProjectModal

@@ -28,4 +28,30 @@ tailwind.config.js
 postcss.config.js
 
 
+ CMS: [Payload](https://payloadcms.com/docs/getting-started/installation)
+
+ ```bash
  
+npm i payload @payloadcms/next @payloadcms/richtext-lexical sharp graphql --legacy-peer-deps
+npm i @payloadcms/db-postgres --legacy-peer-deps
+ ```
+
+ Follow the cos and add the relevant files
+ On vercel.com add new, store, create database
+ Select Neon,
+ create database name
+ copy URL via snippet
+ create .env file and paste 
+
+ Generate a payload_secret via node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
+then access http://localhost:3001/admin/create-first-user
+
+[Payload Collection Confif](https://payloadcms.com/docs/configuration/collections)
+
+Create a collections folder in app folder
+
+in payloadConfig.ts add in collections array: "POSTS"
+
+[Querying Documents](https://payloadcms.com/docs/queries/overview)
+
+Create a lib folder and initialize [Payload](https://payloadcms.com/docs/local-api/overview) 
