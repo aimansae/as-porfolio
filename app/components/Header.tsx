@@ -3,11 +3,10 @@ import React from "react";
 const Header = () => {
   return (
     <header className="relative ">
-      <div className="opacity-10">
-        <div className="absolute top-0 right-0 sm:w-[600px] sm:h-[600px] w-[300px] h-[300px] bg-purple-700/50 rounded-full blur-3xl"></div>
-        <div className="absolute top-4 right-4 sm:w-[400px] sm:h-[400px] w-[150px] h-[150px] bg-purple-500/60 rounded-full blur-2xl"></div>
-        <div className="absolute top-8 right-8 sm:w-[300px] sm:h-[300px] w-[100px] h-[100px] bg-purple-400/70 rounded-full blur-xl"></div>
-      </div>
+      <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-purple-900 opacity-25 rounded-full blur-[180px]" />
+      <div className="absolute top-[30%] right-[-10%] w-[500px] h-[500px] bg-purple-800 opacity-20 rounded-full blur-[140px]" />
+      <div className="absolute bottom-[-15%] left-[20%] w-[400px] h-[400px] bg-purple-700 opacity-20 rounded-full blur-[120px] mix-blend-lighten	" />
+
       <h1 className="my-4 text-4xl font-bold -tracking-tight">
         Aiman Saeed -{" "}
         <span className="text-purple-600">Junior Software Developer</span>
