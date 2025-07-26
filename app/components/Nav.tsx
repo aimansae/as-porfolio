@@ -6,6 +6,7 @@ import content from "@/app/data/home.json";
 import { AlignJustify, X } from "lucide-react";
 import Footer from "@/app/components/Footer";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const mobileRef = useRef<HTMLDivElement>(null);
@@ -37,33 +38,41 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="relative  border-b border-b-gray-600 p-4    flex items-center   justify-between   bg-gray-950">
+    <nav className="relative      p-4    flex items-center   justify-between   bg-gray-950">
       <div>
         <button onClick={() => setIsOpen((prev) => !prev)}>
-          <AlignJustify className="p-1 rounded md:hidden text-white  border border-gray-600 hover:border-purple-500/50 transition-colors " />
+          <AlignJustify className="p-1 rounded md:hidden text-gray-200  border border-gray-600 hover:border-purple-500/50 transition-colors " />
         </button>
       </div>
       {/*Mobile Menu*/}
       {isOpen && (
         <div
           ref={mobileRef}
-          className="gap-12 border-b border-b-gray-600 w-2/3 min-h-screen transition md:hidden absolute top-0 left-0 flex flex-col   bg-gray-900   z-50 text-white"
+          className="gap-8 shadow w-2/3 min-h-screen transition md:hidden absolute top-0 left-0 flex flex-col bg-gray-950 border-r border-gray-600   z-50 text-gray-200"
         >
-          <div className="flex justify-between py-5 px-4 bg-gray-950">
-            <Link href="/" className=" text-md">
-              Logo
+          <div className="flex justify-between items-center  px-4 py-5  ">
+            <Link href="/" className=" text-md relative aspect-square  w-9 h-6">
+              <Image
+                fill
+                alt="logo"
+                src="/assets/logo.png"
+                className="object-cover "
+              />
             </Link>
-            <button onClick={() => setIsOpen(false)} className="flex-end">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="flex-end cursor-pointer"
+            >
               <X
                 size={24}
                 className=" hover:text-purple-400 p-1 rounded md:hidden text-white border border-gray-600 hover:border-purple-500/50 transition-colors"
               />
             </button>
           </div>
-          <ul className="capitalize  flex flex-col   flex-1 gap-4  ">
+          <ul className="capitalize  flex flex-col   flex-1   ">
             {content.navLinks.map((link, i) => (
               <li
-                className="cursor-pointer px-4 py-2 w-full hover:bg-gray-600/30"
+                className="cursor-pointer p-4 transition-colors w-full hover:bg-purple-600/30"
                 key={i}
               >
                 <Link href={link.href}>{link.label}</Link>
@@ -71,18 +80,23 @@ const Nav = () => {
             ))}
           </ul>
 
-          <Footer />
+          <Footer className="bg-" />
         </div>
       )}
       {/*Desktop menu*/}
       <div className="hidden md:flex justify-between items-center container mx-auto ">
-        <Link href="/" className="hidden md:block text-3xl">
-          Logo
+        <Link href="/" className=" text-md relative aspect-square  w-12 h-12">
+          <Image
+            fill
+            alt="logo"
+            src="/assets/logo.png"
+            className="object-cover "
+          />
         </Link>
-        <ul className="capitalize   flex justify-between items-center gap-6   ">
+        <ul className="capitalize  text-gray-200 flex justify-between items-center gap-6   ">
           {content.navLinks.map((link, i) => (
             <li
-              className={`${pathName === link.href ? "underline text-purple-400" : ""} text-xl   hover:transition-colors hover:text-purple-400`}
+              className={`${pathName === link.href ? "shadow-white  shadow-2xl text-purple-400" : ""} text-md   hover:transition-colors hover:text-purple-400`}
               key={i}
             >
               <Link href={link.href}>{link.label}</Link>

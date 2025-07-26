@@ -1,14 +1,16 @@
 import React from "react";
-
-const Footer = () => {
+type FooterProps={
+  className? :string
+};
+const Footer = ({className}:FooterProps) => {
   const year = new Date().getFullYear();
   console.log(year);
   return (
-    <footer className="  border-t border-gray-700 bg-gray-950 text-sm text-gray-400">
-      <div className="container mx-auto px-4 py-4 md:text-center    ">
-        <span className="font-medium text-white">Aiman Saeed</span> Portfolio.
-        All rights reserved.© {year}
-      </div>
+    <footer className="text-sm p-2 w-full text-start  sm:text-center border-t border-gray-700 bg-gray-950 container mx-auto  text-gray-200">
+      <span>
+        &copy; 2025 Aiman Saeed Portfolio. All rights reserved. Inspired by
+        webdecoded.
+      </span>
     </footer>
   );
 };
