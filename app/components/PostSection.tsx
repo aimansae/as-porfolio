@@ -22,7 +22,7 @@ const PostSection = async () => {
     <div className=" ">
       <div className="flex flex-col  sm:gap-24">
         <div>
-          <h2 className="text-3xl mb-12 font-bold text-white ">
+          <h2 className="text-xl sm:text-3xl mb-6 sm:mb-12 font-bold text-white ">
             Latest from the blog
           </h2>
         </div>
@@ -32,10 +32,10 @@ const PostSection = async () => {
             <Link
               key={post.id}
               href={`/posts/${post.id}`}
-              className="group flex flex-col justify-between h-full rounded-xl border border-gray-800   hover:bg-gray-600/30 transition-colors p-6 "
+              className="group flex flex-col justify-between h-full rounded-xl border border-gray-800   hover:bg-gray-600/30 transition-colors p-4 sm:p-6 "
             >
               <article className="flex-1">
-                <h3 className="text-xl font-semibold leading-snug tracking-tight text-white group-hover:text-purple-400 transition-colors">
+                <h3 className="text-md sm:text-xl font-semibold leading-snug tracking-tight text-white group-hover:text-purple-400 transition-colors">
                   {post.title}
                 </h3>
               </article>

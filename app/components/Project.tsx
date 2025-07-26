@@ -60,8 +60,8 @@ const Project = () => {
   const project = projects.find((project) => project.id === selectedProject)!;
 
   return (
-    <section className="  py-32  ">
-      <h2 className="text-3xl font-bold text-white text-center mb-12">
+    <section className="py-16 sm:py-32" id="projects">
+      <h2 className="text-left text-xl sm:text-3xl font-bold text-white sm:text-center mb-6 sm:mb-12">
         Featured projects
       </h2>
 
@@ -69,25 +69,25 @@ const Project = () => {
         {projects.map((project, i) => (
           <button
             onClick={() => handleProjectClick(project.id)}
-            className="text-left hover:shadow-sm rounded-lg p-6 border border-gray-500/50 hover:border-purple-500/50 transition-colors backdrop:blur-sm bg-gray-600/30"
+            className="text-left hover:shadow-sm rounded-lg p-5 sm:p-6 border border-gray-500/50 hover:border-purple-500/50 transition-colors backdrop:blur-sm bg-gray-600/30"
             key={i}
           >
             <div className="flex flex-col h-full w-full">
               <h3 className="text-lg font-semibold text-white mb-2">
                 {project.title}
               </h3>
-                 <ul className="flex flex-wrap gap-1 mt-auto">
-                  {project.tags.map((tag, i) => (
-                    <li
-                      className="px-2 py-0.5 rounded-full text-xs bg-primary-500/20 text-purple-200 border border-purple-500/30  "
-                      key={i}
-                    >
-                      {tag}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-           </button>
+              <ul className="flex flex-wrap gap-1 mt-auto">
+                {project.tags.map((tag, i) => (
+                  <li
+                    className="px-2 py-0.5 rounded-full text-xs bg-primary-500/20 text-purple-200 border border-purple-500/30  "
+                    key={i}
+                  >
+                    {tag}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </button>
         ))}
         {project && (
           <ProjectModal
