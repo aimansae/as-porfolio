@@ -72,6 +72,7 @@ const Nav = () => {
           <ul className="capitalize  flex flex-col   flex-1   ">
             {content.navLinks.map((link, i) => (
               <li
+                onClick={() => setIsOpen(false)}
                 className="cursor-pointer p-4 transition-colors w-full hover:bg-purple-600/30"
                 key={i}
               >
