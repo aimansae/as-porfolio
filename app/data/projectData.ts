@@ -252,24 +252,54 @@ Built with Next.js and deployed on Vercel, this project sharpens component and s
     title: "Markdown Editor",
     githubRepo: "https://github.com/aimansae/as-markdown-editor",
     deployedSite: "https://as-markdowneditor.netlify.app/",
-    description: "Live markdown previewer.",
-    fullDescription:
-      "A markdown editor using `react-markdown` for live preview. It includes syntax highlighting and clean layout.",
-    image: "/images/markdown-editor.png",
-    tag: ["React", "Tailwind CSS", "React Markdown"],
-    techStack: ["w", ""],
+    description:
+      "Live Markdown editor with real-time preview, syntax highlighting, and responsive layout built using React and Tailwind CSS.",
+
+    fullDescription: `This Markdown Editor offers a side-by-side editing and preview experience using \`react-markdown\`.  
+Features include responsive layout, support for headings, lists, links, and inline formatting.  
+Switchable preview/editor views on mobile with content preserved seamlessly across states.  
+Styled using Tailwind CSS with typographic enhancements for readable output.  
+Deployed on Netlify and tested with Jest + React Testing Library.`,
+    image: "/assets/markdown-editor.jpg",
+    imageMobile: "/assets/markdown-editor-mobile.jpg",
+
+    tag: ["React", "TypeScript", "Markdown", "Jest"],
+    techStack: [
+      "React with TypeScript for structured components",
+      "Tailwind CSS for responsive and clean UI",
+      "React Markdown to parse and render Markdown input",
+      "Side-by-side layout with live preview pane",
+      "View toggling on mobile for usability",
+      "Markdown syntax support: h1-h6, lists, links, bold, italics",
+      "Unit testing with Jest and React Testing Library",
+      "Deployed using Netlify",
+      "Planned: LocalStorage, dark mode, export to .md or PDF",
+    ],
   },
   {
     id: 11,
     title: "Accordion Component",
     githubRepo: "https://github.com/aimansae/as-accordion",
     deployedSite: "https://as-accordion.netlify.app/",
-    description: "Simple accordion UI component.",
-    fullDescription:
-      "Reusable accordion component built with React and Tailwind. Focuses on accessibility and ease of reuse.",
-    image: "/images/accordion.png",
-    tag: ["React", "Tailwind CSS"],
-    techStack: ["w", ""],
+    description:
+      "Accessible and reusable accordion UI component built with React and Tailwind CSS.",
+    fullDescription: `This responsive accordion component ensures only one section is expanded at a time.  
+It’s built with semantic HTML (using \`<button>\` elements for accessibility), smooth animations using Tailwind transitions, and keyboard operability.  
+The component leverages React state to toggle sections and is fully tested using Jest and React Testing Library.`,
+    image: "/assets/accordion.jpg",
+    imageMobile: "/assets/accordion-mobile.jpg",
+
+    tag: ["React", "Tailwind CSS", "Accessibility"],
+    techStack: [
+      "React with TypeScript for component logic",
+      "Tailwind CSS for responsive layout and smooth transitions",
+      "React state to control open/close logic",
+      "Accessible design using semantic HTML and ARIA attributes",
+      "Keyboard interaction support (tab and enter/space to toggle)",
+      "Single-section open behavior using controlled state",
+      "Test coverage using Jest and React Testing Library",
+      "Deployed using Netlify",
+    ],
   },
   {
     id: 12,
@@ -277,34 +307,74 @@ Built with Next.js and deployed on Vercel, this project sharpens component and s
     githubRepo: "https://github.com/aimansae/react-signup-form",
     deployedSite: "https://as-singnup-form.netlify.app/",
     description: "Responsive signup form with validation.",
-    fullDescription:
-      "A user signup form using form validation, styled with Tailwind CSS. Shows real-time error messages.",
-    image: "/images/signup-form.png",
+    fullDescription: `A fully responsive signup form built using React, TypeScript, and Tailwind CSS.  
+It features real-time form validation with user-friendly error messages, simulated login functionality with hardcoded credentials, and UI state management.  
+Includes full unit test coverage with Jest and React Testing Library.`,
+    image: "/assets/signup-form.jpg",
+    imageMobile: "/assets/signup-form-mobile.jpg",
     tag: ["React", "Tailwind CSS", "Form Validation"],
-    techStack: ["w", ""],
+    techStack: [
+      "React with TypeScript for form logic and validation",
+      "Tailwind CSS for utility-first, responsive UI design",
+      "Real-time form validation with custom error handling",
+      "Simulated login using hardcoded credentials",
+      "Reusable controlled Input components",
+      "Form error display and conditional rendering",
+      "Unit testing using Jest and React Testing Library",
+      "User-event for simulating user behavior in tests",
+      "Responsive design with mobile-first Tailwind layout",
+      "Prettier and Tailwind plugin for code formatting",
+      "Deployed with Netlify",
+    ],
   },
   {
     id: 13,
     title: "Mortgage Calculator",
     githubRepo: "https://github.com/aimansae/mortgage-calculator",
     deployedSite: "https://mortgage-calculator-cyan.vercel.app",
-    description: "Calculate monthly mortgage payments.",
-    fullDescription:
-      "This mortgage calculator lets users input home price, down payment, interest rate, and term to see estimated payments.",
-    image: "/images/mortgage.png",
-    tag: ["React", "CSS", "JavaScript"],
-    techStack: ["w", ""],
+    description: "Responsive mortgage calculator with real-time estimates.",
+    fullDescription: `This app is built with Next.js, React Hook Form, and Tailwind CSS.  
+It calculates monthly repayments based on loan amount, interest rate, mortgage type (repayment or interest-only), and term.  
+Includes live validation, dynamic UI feedback, and complete form state control.`,
+    image: "/assets/mortgage.jpg",
+    imageMobile: "/assets/mortgage-mobile.jpg",
+    tag: ["React", "Tailwind CSS"],
+    techStack: [
+      "Next.js for routing and SSR",
+      "React with TypeScript for component logic and safety",
+      "React Hook Form for form state management and validation",
+      "Tailwind CSS for custom styling and responsive design",
+      "Dynamic mortgage logic for both repayment and interest-only types",
+      "Form reset using RHF's reset() and state cleanup",
+      "Custom validation logic for interest rate and amount",
+      "Dynamic styling for selected mortgage type",
+      "Inline error display with conditional rendering",
+      "Deployed on Vercel",
+    ],
   },
   {
     id: 14,
     title: "Instapro",
     githubRepo: "https://github.com/aimansae/instapro-replica",
     deployedSite: "https://instaproreplica.netlify.app/",
-    description: "A responsive Instagram replica UI.",
-    fullDescription:
-      "Instapro replicates the Instagram interface and behavior. Built using responsive Tailwind components and React state management.",
-    image: "/images/instapro.png",
-    tag: ["React", "Tailwind CSS"],
-    techStack: ["w", ""],
+    description:
+      "Instapro UI replica with responsive layout and styled components.",
+    fullDescription: `Instapro replica UI using React, Tailwind CSS, and Emotion for styling.  
+It features a responsive layout, hamburger navigation, and styled components.  
+Built as part of a front-end challenge, this project focuses on pixel-perfect design, layout fidelity, and mobile-first responsiveness.`,
+    image: "/assets/instapro.jpg",
+    imageMobile: "/assets/instapro-mobile.jpg",
+
+    tag: ["React", "Emotion Css", "Styled Components"],
+    techStack: [
+      "React with TypeScript for component logic and UI structure",
+      "Tailwind CSS and Emotion for custom, responsive styling",
+      "Responsive mobile-first layout with hamburger menu",
+      "Component-based architecture with reusable sections",
+      "Linting and formatting with ESLint and Prettier",
+      "Handled layout challenges including footer/navbar positioning and hero image scaling",
+      "Used React Icons and Font Awesome for icons",
+      "Deployed via Netlify",
+    ],
   },
 ];

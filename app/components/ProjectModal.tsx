@@ -24,7 +24,7 @@ const ProjectModal = ({
         {/* Header */}
         <div className="flex items-center justify-between p-4 border-b border-gray-200">
           <Link
-            title="Live Site"
+            title="Deployed Site"
             href={project.deployedSite}
             className="flex items-center gap-2  hover:text-purple-300 transition-colors capitalize text-2xl font-bold text-purple-500"
           >
@@ -41,7 +41,7 @@ const ProjectModal = ({
         </div>
 
         {/* Content */}
-        <div className="text-gray-200  flex flex-col md:flex-row gap-10 p-8">
+        <div className="text-gray-200  flex flex-col md:flex-row gap-0 sm:gap-10 p-8">
           {/* Description */}
           <div className="flex-1 space-y-4">
             <h3 className="text-lg font-semibold  ">Overview</h3>
@@ -68,14 +68,14 @@ const ProjectModal = ({
                   href={project.deployedSite}
                 >
                   <FaGithub className="text-gray-200 font-bold" />
-                  Deployed site
+                  Live site
                 </Link>
                 <Link
                   className="items-center gap-2 flex py-3 px-4 rounded-md text-xs bg-primary-500/20 text-purple-200 border border-purple-500/30 hover:border-purple-600  "
                   href={project.githubRepo}
                 >
                   <IoRocketOutline className="text-gray-200 font-bold" />
-                  Github Repo
+                  Github
                 </Link>
               </div>
             </div>
