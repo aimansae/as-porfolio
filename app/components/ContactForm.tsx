@@ -2,8 +2,11 @@
 
 import React, { FormEvent, useState } from "react";
 import { X } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const ContactForm = () => {
+  const router = useRouter();
+
   const [status, setStatus] = useState<{
     type: "success" | "error";
     message: string;
@@ -43,6 +46,10 @@ const ContactForm = () => {
           message:
             "Your message was sent successfully, we will contact you shortly",
         });
+        setTimeout(() => {
+          setStatus(null);
+          router.push("/");
+        }, 3000);
         setFormData({ name: "", email: "", message: "" });
       } else {
         setStatus({
@@ -54,6 +61,10 @@ const ContactForm = () => {
       console.log(error);
       setStatus({ type: "error", message: "Failed to send the message" });
     }
+
+    setTimeout(() => {
+      setStatus(null);
+    }, 3000);
   };
   return (
     <section className="min-h-screen flex items-start justify-center bg-gradient-to-br from-gray-900 to-gray-800 px-4 py-16">

@@ -55,3 +55,5 @@ in payloadConfig.ts add in collections array: "POSTS"
 [Querying Documents](https://payloadcms.com/docs/queries/overview)
 
 Create a lib folder and initialize [Payload](https://payloadcms.com/docs/local-api/overview) 
+
+For screenshots used https://www.screenshotmachine.com/
