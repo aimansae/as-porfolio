@@ -1,33 +1,26 @@
 import Link from "next/link";
-import { loadPayload } from "../lib/payload";
 import React from "react";
-
-const formatDate = (date: string) => {
-  return new Date(date).toLocaleDateString("en-UK", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-  });
-};
+import { posts } from "../data/posts";
+import { formatDate } from "../lib/functions";
 const PostSection = async () => {
-  console.log(loadPayload);
-  const payload = await loadPayload();
-  const posts = await payload.find({
-    collection: "posts",
-    limit: 2,
-    sort: "-createdAt",
-  });
+  // console.log(loadPayload);
+  // const payload = await loadPayload();
+  // const posts = await payload.find({
+  //   collection: "posts",
+  //   limit: 2,
+  //   sort: "-createdAt",
+  // });
 
   return (
     <div className="pb-16 flex flex-col  sm:gap-24">
-      <div>
+      <div id="blog">
         <h2 className="mb-6 sm:mb-16 font-bold text-white text-xl sm:text-3xl ">
           Latest from the blog
         </h2>
       </div>
 
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-        {posts.docs.map((post) => (
+        {posts.map((post) => (
           <Link
             key={post.id}
             href={`/posts/${post.id}`}
@@ -40,7 +33,7 @@ const PostSection = async () => {
             </article>
 
             <div className="mt-6 text-xs tracking-tight sm:text-sm text-gray-400 italic text-right  transition-colors">
-              <time>{formatDate(post.createdAt)}</time>
+              <time> {formatDate(post.date)}</time>
             </div>
           </Link>
         ))}

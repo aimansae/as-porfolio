@@ -38,10 +38,13 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="relative      p-4    flex items-center   justify-between   bg-gray-950">
+    <nav className="relative      p-4    flex items-center   justify-between   bg-gray-950 duration-200 text-gray-200   border-gray-200 ">
       <div>
-        <button onClick={() => setIsOpen((prev) => !prev)}>
-          <AlignJustify className="p-1 rounded md:hidden text-gray-200  border border-gray-600 hover:border-purple-500/50 transition-colors " />
+        <button
+          className=" hover:border-purple-500/50 border rounded transform hover:cursor-pointer hover:scale-105 transition-transform"
+          onClick={() => setIsOpen((prev) => !prev)}
+        >
+          <AlignJustify className="p-1  text-2xl md:hidden   " />
         </button>
       </div>
       {/*Mobile Menu*/}
@@ -76,7 +79,7 @@ const Nav = () => {
                 className="cursor-pointer p-4 transition-colors w-full hover:bg-purple-600/30"
                 key={i}
               >
-                <Link href={link.href}>{link.label}</Link>
+                <Link href={link.href}>A{link.label}</Link>
               </li>
             ))}
           </ul>

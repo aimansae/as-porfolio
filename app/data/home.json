@@ -6,12 +6,12 @@
     },
     {
       "label": "projects",
-      "href": "#projects"
+      "href": "/#projects"
     },
 
     {
       "label": "blog",
-      "href": "/blog"
+      "href": "/#blog"
     }
   ]
 }
