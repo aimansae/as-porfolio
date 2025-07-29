@@ -3,7 +3,6 @@ import config from "@payload-config";
 import { RootPage, generatePageMetadata } from "@payloadcms/next/views";
 import { importMap } from "../importMap";
 
-// ✅ Define expected route params (segments = [[...segments]])
 type Params = { segments?: string[] };
 type RawSearchParams = { [key: string]: string | string[] | undefined };
 type SearchParams = { [key: string]: string | string[] };
