@@ -79,7 +79,7 @@ const Nav = () => {
                 className="cursor-pointer p-4 transition-colors w-full hover:bg-purple-600/30"
                 key={i}
               >
-                <Link href={link.href}>A{link.label}</Link>
+                <Link href={link.href}>{link.label}</Link>
               </li>
             ))}
           </ul>

@@ -1,5 +1,3 @@
-import { loadPayload } from "@/app/lib/payload";
-import { RichText as SerializedRichText } from "@payloadcms/richtext-lexical/react";
 import { posts } from "../../data/posts";
 import { formatDate } from "@/app/lib/functions";
 import { IoTimeOutline } from "react-icons/io5";
@@ -56,7 +54,7 @@ export default async function PostDetail({
         <section>
           {" "}
           <p className="my-4 font-bold">{post.description.sectionTitle}</p>
-          <ul className="flex flex-col gap-4 px-4 ">
+          <ul className="flex flex-col gap-4 px-6 ">
             {post.description.list.map((item, index) => (
               <li className="list-disc list-inside text-gray-200" key={index}>
                 {item}

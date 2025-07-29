@@ -214,7 +214,7 @@ const AboutPage = () => {
       <section className="space-y-4">
         <h2 className="text-2xl font-bold">What’s Next?</h2>
         <p>
-          I'm ready to join the industry as a Junior Frontend Developer,
+          I &apos;m ready to join the industry as a Junior Frontend Developer,
           collaborate in real-world projects, and keep learning every day. It’s
           time to step out of my comfort zone and grow even further.
         </p>
