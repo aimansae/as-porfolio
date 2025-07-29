@@ -58,7 +58,6 @@ const ContactForm = () => {
         });
       }
     } catch (error) {
-      console.log(error);
       setStatus({ type: "error", message: "Failed to send the message" });
     }
 

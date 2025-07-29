@@ -41,7 +41,7 @@ const Project = () => {
 
   return (
     <section className="py-16 sm:py-32" id="projects">
-      <h2 className="text-left text-xl sm:text-3xl font-bold text-white sm:text-center mb-6 sm:mb-12">
+      <h2 className=" text-xl sm:text-3xl font-bold text-white mb-6 sm:mb-12">
         Featured projects
       </h2>
 

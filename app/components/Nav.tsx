@@ -38,22 +38,30 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="relative      p-4    flex items-center   justify-between   bg-gray-950 duration-200 text-gray-200   border-gray-200 ">
-      <div>
+    <nav className="relative px-8 py-4     flex items-center   justify-between   bg-gray-950 duration-200 text-gray-200   border-gray-200 ">
+      <div className="flex items-center justify-end  w-full md:hidden ">
         <button
-          className=" hover:border-purple-500/50 border rounded transform hover:cursor-pointer hover:scale-105 transition-transform"
+          className="transform hover:cursor-pointer hover:scale-105 transition-transform"
           onClick={() => setIsOpen((prev) => !prev)}
         >
-          <AlignJustify className="p-1  text-2xl md:hidden   " />
+          <AlignJustify size={28} />
         </button>
       </div>
+      {/*Mobile dark overlay*/}
+      {isOpen && (
+        <div
+          onClick={() => setIsOpen(false)}
+          className="fixed inset-0 bg-black/80 z-40"
+        ></div>
+      )}
       {/*Mobile Menu*/}
+
       {isOpen && (
         <div
           ref={mobileRef}
-          className="gap-8 shadow w-2/3 h-screen    transition md:hidden absolute top-0 left-0 flex flex-col bg-gray-950 border-r border-gray-600   z-50 text-gray-200"
+          className="gap-8 p-4  shadow w-2/3 h-screen    transition md:hidden absolute top-0 left-0 flex flex-col bg-gray-950 border-r border-gray-600   z-50 text-gray-200"
         >
-          <div className="flex  justify-between items-center  px-4 py-5  ">
+          <div className="flex  justify-between items-center  p4  ">
             <Link href="/" className=" text-md relative aspect-square  w-9 h-6">
               <Image
                 fill
@@ -76,7 +84,7 @@ const Nav = () => {
             {content.navLinks.map((link, i) => (
               <li
                 onClick={() => setIsOpen(false)}
-                className="cursor-pointer p-4 transition-colors w-full hover:bg-purple-600/30"
+                className="cursor-pointer py-4 transition-colors w-full hover:bg-purple-600/30"
                 key={i}
               >
                 <Link href={link.href}>{link.label}</Link>
@@ -84,12 +92,12 @@ const Nav = () => {
             ))}
           </ul>
           <div className="mt-auto">
-            <Footer />
+            <Footer className="text-xs" />
           </div>
         </div>
       )}
       {/*Desktop menu*/}
-      <div className="hidden md:flex justify-between items-center container mx-auto ">
+      <div className="hidden md:flex justify-between items-center container mx-auto p-4  sm:px-20 ">
         <Link href="/" className=" text-md relative aspect-square  w-12 h-12">
           <Image
             fill

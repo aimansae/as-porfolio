@@ -12,14 +12,14 @@ const PostSection = async () => {
   // });
 
   return (
-    <div className="pb-16 flex flex-col  sm:gap-24">
+    <div className="pb-16 flex flex-col">
       <div id="blog">
-        <h2 className="mb-4 sm:mb-16 font-bold text-white text-xl sm:text-3xl ">
+        <h2 className="sm:text-3xl font-bold text-white   mb-6 sm:mb-12">
           Latest from the blog
         </h2>
       </div>
 
-      <div className="mb-4 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mb-4 grid gap-4  grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
           <Link
             key={post.id}
