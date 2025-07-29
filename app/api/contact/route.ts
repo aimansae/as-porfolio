@@ -1,4 +1,3 @@
-import { Contact } from "@/app/collections/Contact";
 import { loadPayload } from "@/app/lib/payload";
 import { NextRequest, NextResponse } from "next/server";
 
