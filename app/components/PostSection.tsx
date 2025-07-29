@@ -14,7 +14,7 @@ const PostSection = async () => {
   return (
     <div className="pb-16 flex flex-col  sm:gap-24">
       <div id="blog">
-        <h2 className="sm:mb-16 font-bold text-white text-xl sm:text-3xl ">
+        <h2 className="mb-4 sm:mb-16 font-bold text-white text-xl sm:text-3xl ">
           Latest from the blog
         </h2>
       </div>
