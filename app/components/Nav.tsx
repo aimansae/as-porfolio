@@ -51,7 +51,7 @@ const Nav = () => {
       {isOpen && (
         <div
           ref={mobileRef}
-          className="gap-8 shadow w-2/3 min-h-screen transition md:hidden absolute top-0 left-0 flex flex-col bg-gray-950 border-r border-gray-600   z-50 text-gray-200"
+          className="gap-8 shadow w-2/3 h-screen    transition md:hidden absolute top-0 left-0 flex flex-col bg-gray-950 border-r border-gray-600   z-50 text-gray-200"
         >
           <div className="flex  justify-between items-center  px-4 py-5  ">
             <Link href="/" className=" text-md relative aspect-square  w-9 h-6">
@@ -72,7 +72,7 @@ const Nav = () => {
               />
             </button>
           </div>
-          <ul className="capitalize  flex flex-col   flex-1   ">
+          <ul className="capitalize overflow-y-auto  flex flex-col   flex-1   ">
             {content.navLinks.map((link, i) => (
               <li
                 onClick={() => setIsOpen(false)}
