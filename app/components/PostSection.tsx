@@ -26,7 +26,7 @@ const PostSection = async () => {
             href={`/posts/${post.id}`}
             className="group flex flex-col justify-between h-full rounded-xl border border-gray-800   hover:bg-gray-600/30 transition-colors p-4 sm:p-6 "
           >
-            <article className="flex-1">
+            <article className="flex">
               <h3 className="text-md sm:text-xl font-semibold leading-snug tracking-tight text-white group-hover:text-purple-400 transition-colors">
                 {post.title}
               </h3>
