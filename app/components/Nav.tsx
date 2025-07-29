@@ -53,7 +53,7 @@ const Nav = () => {
           ref={mobileRef}
           className="gap-8 shadow w-2/3 min-h-screen transition md:hidden absolute top-0 left-0 flex flex-col bg-gray-950 border-r border-gray-600   z-50 text-gray-200"
         >
-          <div className="flex justify-between items-center  px-4 py-5  ">
+          <div className="flex  justify-between items-center  px-4 py-5  ">
             <Link href="/" className=" text-md relative aspect-square  w-9 h-6">
               <Image
                 fill
@@ -83,8 +83,9 @@ const Nav = () => {
               </li>
             ))}
           </ul>
-
-          <Footer className="bg-" />
+          <div className="mt-auto">
+            <Footer />
+          </div>
         </div>
       )}
       {/*Desktop menu*/}
