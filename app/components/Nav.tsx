@@ -40,7 +40,7 @@ const Nav = () => {
     <nav className="relative px-8 py-4     flex items-center   justify-between   bg-gray-950 duration-200 text-gray-200   border-gray-200 ">
       <div className="flex items-center justify-end  w-full md:hidden ">
         <button
-          className="transform hover:cursor-pointer hover:scale-105 transition-transform"
+          className=" active:border rounded active:border-gray-600  purple-600/50transform hover:cursor-pointer hover:scale-105 transition-transform"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           <AlignJustify size={28} />
@@ -79,7 +79,7 @@ const Nav = () => {
             >
               <X
                 size={24}
-                className=" hover:text-purple-400 p-1 rounded md:hidden text-white border border-gray-600 hover:border-purple-500/50 transition-colors"
+                className="active:border-purple-600/50 hover:text-purple-400 p-1 rounded md:hidden text-white border border-gray-600 hover:border-purple-500/50 transition-colors"
               />
             </button>
           </div>
