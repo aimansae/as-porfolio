@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useState } from "react";
-import ProjectModal from "./ProjectModal";
+import ProjectModal2 from "./ProjectModal2";
 import { projects } from "../data/projectData";
+
+import { Button } from "@/components/ui/button";
 
 const Project = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -69,14 +71,7 @@ const Project = () => {
             </div>
           </button>
         ))}
-        {project && (
-          <ProjectModal
-            project={project}
-            onClose={handleCloseModal}
-            onNext={handleNextProjectClick}
-            onPrev={handlePrevProjectClick}
-          />
-        )}
+        {project && <ProjectModal2 onClick={} />}
       </div>
     </section>
   );

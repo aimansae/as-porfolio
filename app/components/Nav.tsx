@@ -12,7 +12,6 @@ const Nav = () => {
   const mobileRef = useRef<HTMLDivElement>(null);
   const pathName = usePathname();
 
-  console.log("currentpath", pathName);
   useEffect(() => {
     if (isOpen) {
       document.body.classList.add("overflow-hidden");

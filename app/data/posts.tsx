@@ -43,7 +43,7 @@ export const posts = [
     id: "post2",
     title: `Behind the scenes: How I built Shop Dawn Project`,
     subtitle: [
-      " Building a full e-commerce site using Next.js ans pushing boundaries of design, logic, and persistence",
+      " Building a full e-commerce site using Next.js and pushing boundaries of design, logic, and persistence",
       <>
         {" "}
         <Link
