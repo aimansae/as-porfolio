@@ -83,12 +83,13 @@ const Nav = () => {
               />
             </button>
           </div>
-          <ul className="my-6 capitalize overflow-y-auto  flex flex-col   flex-1   ">
+          <ul className="mt-6 capitalize overflow-y-auto  flex flex-col   flex-1   ">
             {content.navLinks.map((link, i) => (
               <li
                 onClick={() => setIsOpen(false)}
-                className="active:ring-1 active:bg-purple-600/30 cursor-pointer py-4 transition-colors w-full hover:bg-purple-600/30"
+                className="cursor-pointer py-4 px-2 transition-colors w-full hover:bg-purple-600/30 active:bg-purple-600/50  "
                 key={i}
+                style={{ WebkitTapHighlightColor: "transparent" }}
               >
                 <Link href={link.href}>{link.label}</Link>
               </li>
