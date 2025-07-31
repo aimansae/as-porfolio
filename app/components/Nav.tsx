@@ -58,10 +58,14 @@ const Nav = () => {
       {isOpen && (
         <div
           ref={mobileRef}
-          className="gap-8 p-4  shadow w-2/3 h-screen    transition md:hidden absolute top-0 left-0 flex flex-col bg-gray-950 border-r border-gray-600   z-50 text-gray-200"
+          className="  p-4  shadow w-2/3 h-screen    transition md:hidden absolute top-0 left-0 flex flex-col bg-gray-950 border-r border-gray-600   z-50 text-gray-200"
         >
-          <div className="flex  justify-between items-center  p4  ">
-            <Link href="/" className=" text-md relative aspect-square  w-9 h-6">
+          <div className="flex  justify-between items-center     ">
+            <Link
+              onClick={() => setIsOpen(false)}
+              href="/"
+              className="h-8 w-10 text-md relative aspect-square  active:ring-1 active:ring-purple-500 "
+            >
               <Image
                 fill
                 alt="logo"
@@ -79,11 +83,11 @@ const Nav = () => {
               />
             </button>
           </div>
-          <ul className="capitalize overflow-y-auto  flex flex-col   flex-1   ">
+          <ul className="my-6 capitalize overflow-y-auto  flex flex-col   flex-1   ">
             {content.navLinks.map((link, i) => (
               <li
                 onClick={() => setIsOpen(false)}
-                className="cursor-pointer py-4 transition-colors w-full hover:bg-purple-600/30"
+                className="active:ring-1 active:bg-purple-600/30 cursor-pointer py-4 transition-colors w-full hover:bg-purple-600/30"
                 key={i}
               >
                 <Link href={link.href}>{link.label}</Link>
