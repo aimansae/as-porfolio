@@ -1,0 +1,20 @@
+{
+  "navLinks": [
+    {
+      "label": "projects",
+      "href": "/projects"
+    },
+    {
+      "label": "about me",
+      "href": "/about"
+    },
+    {
+      "label": "blog",
+      "href": "/blog"
+    },
+    {
+      "label": "contact me",
+      "href": "/contact"
+    }
+  ]
+}
