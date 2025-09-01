@@ -15,8 +15,7 @@ const Hero = () => {
       x: e.clientX - divPosition.left,
       y: e.clientY - divPosition.top,
     });
-    console.log("pos", mousePos);
-  };
+   };
 
   return (
     <div className="flex w-full flex-col gap-2 px-4 lg:h-[90%]">

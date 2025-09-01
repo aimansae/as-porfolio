@@ -22,8 +22,7 @@ const ContactForm = () => {
         setIndex(0);
       }
 
-      console.log("index is", index);
-    }, 200);
+     }, 200);
 
     return () => clearInterval(interval);
   }, [index]);

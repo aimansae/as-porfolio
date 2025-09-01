@@ -20,7 +20,6 @@ const Gallery = () => {
   const current = projects.find((p) => p.id === selectedProject);
   const [isOpen, setIsOpen] = useState(false);
   const currentIndex = projects.findIndex((p) => p.id === selectedProject);
-  console.log("currentIndex is", currentIndex);
   const [showMobileImg, setShowMobileImg] = useState(false);
   const [loading, setLoading] = useState(true);
   const [loadGalleryImg, setLoadGalleryImg] = useState<Record<number, boolean>>(
@@ -38,7 +37,6 @@ const Gallery = () => {
     setSelectedProject(prev);
     setShowMobileImg(false);
   };
-  console.log("current", current, "selectedProject is", selectedProject);
   return (
     <section className="flex flex-col gap-4 px-4 sm:py-4 md:gap-6">
       <h3 className="[font-family:var(--font-bungee)] text-xl tracking-wide sm:text-2xl md:my-4">
@@ -51,7 +49,6 @@ const Gallery = () => {
               key={project.id}
               onClick={() => {
                 setSelectedProject(project.id);
-                console.log("clicked", project.title, project.id);
                 setIsOpen(true);
               }}
               className="group relative cursor-pointer break-inside-avoid overflow-hidden rounded-md border border-orange-400/60 shadow-[0_0_10px_rgba(251,146,60,0.5)] transition-all duration-500 hover:border-orange-500 hover:shadow-[0_0_15px_rgba(168,85,247,0.7)]"

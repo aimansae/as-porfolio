@@ -7,13 +7,12 @@ import {
   SiReact,
   SiJavascript,
   SiHtml5,
-  SiCss3,
 } from "react-icons/si";
 
-const Intro = ({ className }: { className?: string }) => {
+const Intro = () => {
   return (
     <section className={`flex flex-col gap-2`}>
-      <div className="tracking-wider hidden md:">
+      <div className="md: hidden tracking-wider">
         <p className="[font-family:var(--font-roboto)] text-xs font-semibold sm:text-base">
           I design and build responsive, user-friendly web interfaces using
           modern technologies. Passionate about clean code and new learnings.
