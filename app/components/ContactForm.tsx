@@ -21,8 +21,7 @@ const ContactForm = () => {
         setDisplayedText("g");
         setIndex(0);
       }
-
-     }, 200);
+    }, 200);
 
     return () => clearInterval(interval);
   }, [index]);
@@ -88,116 +87,121 @@ const ContactForm = () => {
     }, 3000);
   };
   return (
-    <div className="container mx-auto flex max-w-6xl px-4 lg:items-center lg:justify-center">
-      <div className="flex flex-col gap-6">
-        {/* Left Side (Heading + Info) */}
-        <div className="relative z-40 flex flex-col items-start justify-between gap-4">
-          <h1 className="[font-family:var(--font-bungee)] text-2xl tracking-wide sm:text-3xl">
-            <span className="block">{displayedText}</span>
-          </h1>
+    <div className="flex h-full flex-col items-center justify-center">
+      <div className="container mx-auto max-w-6xl px-4">
+        <div className="flex flex-col gap-3 sm:gap-6">
+          {/* Left Side (Heading + Info) */}
+          <div className="relative z-40 flex flex-col items-start justify-between gap-4">
+            <h1 className="[font-family:var(--font-bungee)] text-2xl tracking-wide sm:text-3xl">
+              <span className="block">{displayedText}</span>
+            </h1>
 
-          <h2 className="[font-family:var(--font-bungee)] text-xl tracking-wide sm:py-4 sm:text-2xl md:gap-6">
-            Let’s build something great
-          </h2>
-          <div className="tracking-wider md:block">
-            <p className="text-sm font-semibold tracking-wide text-gray-300 sm:text-base">
-              Feel free to reach out for collaborations, questions, or just a
-              friendly hello. I&apos;ll get back to you as soon as possible!
-            </p>
+            <h2 className="[font-family:var(--font-bungee)] text-xl tracking-wide sm:py-4 sm:text-2xl md:gap-6">
+              Let’s build something great
+            </h2>
+            <div className="tracking-wider md:block">
+              <p className="text-sm font-semibold tracking-wide text-gray-300 sm:text-base">
+                Feel free to reach out for collaborations, questions, or just a
+                friendly hello. I&apos;ll get back to you as soon as possible!
+              </p>
+            </div>
           </div>
-        </div>
 
-        {/* Right Side (Form) */}
-        {status ? (
-          <div
-            className={`my-4 flex items-start justify-between rounded-md p-3 text-sm shadow-md ${
-              status.type === "success"
-                ? "border border-green-400 bg-green-200/80 text-green-800"
-                : "border border-red-400 bg-red-200/80 text-red-800"
-            }`}
-          >
-            <span className="flex-1 text-xs sm:text-sm">{status.message}</span>
-            <X
-              size={18}
-              onClick={() => setStatus(null)}
-              className="transform cursor-pointer transition-transform hover:scale-110"
-            />
-          </div>
-        ) : (
-          <form
-            onSubmit={handleSubmit}
-            className="flex w-full flex-col gap-4 rounded-2xl shadow-2xl backdrop-blur-xl"
-          >
-            {/* Name */}
-            <div className=" ">
-              <label
-                htmlFor="name"
-                className="mb-1 block text-sm font-medium text-gray-300"
-              >
-                Name
-              </label>
-              <input
-                required
-                value={formData.name}
-                onChange={handleChange}
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Your Name"
-                className="w-full rounded-lg border border-gray-700 px-4 py-3 text-white placeholder-gray-400 transition focus:border-[#bc4414] focus:ring-2 focus:ring-[#bc4414] focus:outline-none"
-              />
-            </div>
-
-            {/* Email */}
-            <div className=" ">
-              <label
-                htmlFor="email"
-                className="mb-1 block text-sm font-medium text-gray-300"
-              >
-                Email
-              </label>
-              <input
-                required
-                value={formData.email}
-                onChange={handleChange}
-                type="email"
-                name="email"
-                id="email"
-                placeholder="you@example.com"
-                className="w-full rounded-lg border border-gray-700 px-4 py-3 text-white placeholder-gray-400 transition focus:border-[#bc4414] focus:ring-2 focus:ring-[#bc4414] focus:outline-none"
-              />
-            </div>
-
-            {/* Message */}
-            <div className=" ">
-              <label
-                htmlFor="message"
-                className="mb-1 block text-sm font-medium text-gray-300"
-              >
-                Message
-              </label>
-              <textarea
-                required
-                value={formData.message}
-                onChange={handleChange}
-                id="message"
-                name="message"
-                rows={5}
-                placeholder="Type your message..."
-                className="w-full rounded-lg border border-gray-700 px-4 py-3 text-white placeholder-gray-400 transition focus:border-[#bc4414] focus:ring-2 focus:ring-[#bc4414] focus:outline-none"
-              ></textarea>
-            </div>
-
-            {/* Button */}
-            <button
-              type="submit"
-              className="cursor-pointer rounded-lg border border-transparent bg-[#bc4414] px-8 py-3 [font-family:var(--font-bungee)] font-medium text-white shadow-lg transition-colors hover:bg-[#993209] sm:w-1/2"
+          {/* Right Side (Form) */}
+          {status ? (
+            <div
+              className={`my-4 flex items-start justify-between rounded-md p-3 text-sm shadow-md ${
+                status.type === "success"
+                  ? "border border-green-400 bg-green-200/80 text-green-800"
+                  : "border border-red-400 bg-red-200/80 text-red-800"
+              }`}
             >
-              {loading ? "Sending..." : "Send message"}
-            </button>
-          </form>
-        )}
-      </div>
+              <span className="flex-1 text-xs sm:text-sm">
+                {status.message}
+              </span>
+              <X
+                size={18}
+                onClick={() => setStatus(null)}
+                className="transform cursor-pointer transition-transform hover:scale-110"
+              />
+            </div>
+          ) : (
+            <form
+              onSubmit={handleSubmit}
+              className="flex w-full flex-col gap-2 rounded-2xl pb-2 shadow-2xl backdrop-blur-xl sm:gap-4"
+            >
+              {/* Name */}
+              <div className="flex gap-2 sm:justify-between sm:gap-4">
+                <div className="w-full">
+                  <label
+                    htmlFor="name"
+                    className="mb-1 hidden text-sm font-medium text-gray-300 sm:block"
+                  >
+                    Name
+                  </label>
+                  <input
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Your Name"
+                    className="w-full rounded-lg border border-gray-700 px-3 py-2 text-white placeholder-gray-400 transition placeholder:text-xs focus:border-[#bc4414] focus:ring-2 focus:ring-[#bc4414] focus:outline-none sm:px-4 sm:py-3 placeholder:sm:text-sm"
+                  />
+                </div>
+
+                {/* Email */}
+                <div className="w-full">
+                  <label
+                    htmlFor="email"
+                    className="mb-1 hidden text-sm font-medium text-gray-300 sm:block"
+                  >
+                    Email
+                  </label>
+                  <input
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="you@example.com"
+                    className="w-full rounded-lg border border-gray-700 px-3 py-2 text-white placeholder-gray-400 transition placeholder:text-xs focus:border-[#bc4414] focus:ring-2 focus:ring-[#bc4414] focus:outline-none sm:px-4 sm:py-3 placeholder:sm:text-sm"
+                  />
+                </div>
+              </div>
+
+              {/* Message */}
+              <div className="">
+                <label
+                  htmlFor="message"
+                  className="mb-1 hidden text-sm font-medium text-gray-300 sm:block"
+                >
+                  Message
+                </label>
+                <textarea
+                  required
+                  value={formData.message}
+                  onChange={handleChange}
+                  id="message"
+                  name="message"
+                  placeholder="Type your message..."
+                  className="h-24 w-full rounded-lg border border-gray-700 px-4 py-3 text-white placeholder-gray-400 transition focus:border-[#bc4414] focus:ring-2 focus:ring-[#bc4414] focus:outline-none sm:block"
+                ></textarea>
+              </div>
+
+              {/* Button */}
+              <button
+                type="submit"
+                className="sm:text-basefont-medium w-max cursor-pointer rounded-lg border border-transparent bg-[#bc4414] px-6 py-2 [font-family:var(--font-bungee)] text-sm text-white shadow-lg transition-colors hover:bg-[#993209]"
+              >
+                {loading ? "Sending..." : "Send"}
+              </button>
+            </form>
+          )}
+        </div>
+      </div>{" "}
     </div>
   );
 };

@@ -40,7 +40,7 @@ const Nav = () => {
     >
       <div className="z-50 flex w-full items-center justify-end md:hidden">
         <button
-          className="transform rounded px-4 py-2 transition-transform hover:scale-105 hover:cursor-pointer active:border active:border-gray-600"
+          className="rounded px-4 py-2 hover:cursor-pointer hover:text-orange-500/80 active:border active:border-gray-600"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           <AlignJustify size={28} />

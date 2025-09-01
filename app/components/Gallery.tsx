@@ -38,7 +38,7 @@ const Gallery = () => {
     setShowMobileImg(false);
   };
   return (
-    <section className="flex flex-col gap-4 px-4 sm:py-4 md:gap-6">
+    <section className="flex flex-col gap-4 pb-4 md:gap-6">
       <h3 className="[font-family:var(--font-bungee)] text-xl tracking-wide sm:text-2xl md:my-4">
         Projects
       </h3>

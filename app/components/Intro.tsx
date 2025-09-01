@@ -12,7 +12,7 @@ import {
 const Intro = () => {
   return (
     <section className={`flex flex-col gap-2`}>
-      <div className="md: hidden tracking-wider">
+      <div className="hidden tracking-wider md:block">
         <p className="[font-family:var(--font-roboto)] text-xs font-semibold sm:text-base">
           I design and build responsive, user-friendly web interfaces using
           modern technologies. Passionate about clean code and new learnings.

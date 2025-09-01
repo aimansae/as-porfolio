@@ -17,9 +17,16 @@ export default function LayoutWrapper({
   if (isAdmin) return <>{children}</>;
 
   return (
-    <div className="container mx-auto flex h-screen max-w-6xl flex-col">
+    <div className="flex min-h-dvh flex-col">
+      {/* Header */}
       <Nav />
-      <main className="flex-1">{children}</main>
+
+      {/* Main */}
+      <main className="flex flex-1 items-center justify-center px-4">
+        <div className="w-full max-w-6xl">{children}</div>
+      </main>
+
+      {/* Footer */}
       <Footer />
     </div>
   );

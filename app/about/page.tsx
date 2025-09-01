@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const AboutPage = () => {
   return (
-    <main className="container mx-auto flex min-h-screen max-w-6xl flex-col space-y-8 p-4 sm:p-6 md:p-8">
+    <main className="container mx-auto flex max-w-6xl flex-col space-y-8 py-4">
       {/* Header */}
       <header>
         <h1 className="[font-family:var(--font-bungee)] text-xl tracking-wide sm:text-2xl md:text-3xl">
