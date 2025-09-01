@@ -38,7 +38,7 @@ const ProjectModal = () => {
 
   return (
     <section className="py-16 sm:py-32" id="projects">
-      <h2 className="text-xl sm:text-3xl font-bold text-white mb-6 sm:mb-12">
+      <h2 className="mb-6 text-xl font-bold text-white sm:mb-12 sm:text-3xl">
         Featured projects
       </h2>
 
@@ -50,16 +50,16 @@ const ProjectModal = () => {
               setSelectedProject(project.id);
               setOpen(true);
             }}
-            className="text-left hover:shadow-sm rounded-lg p-5 sm:p-6 border border-gray-500/50 hover:border-purple-500/50 transition-colors backdrop:blur-sm bg-gray-600/30"
+            className="rounded-lg border border-gray-500/50 bg-gray-600/30 p-5 text-left transition-colors backdrop:blur-sm hover:border-purple-500/50 hover:shadow-sm sm:p-6"
           >
-            <div className="flex flex-col h-full w-full hover:cursor-pointer">
-              <h3 className="hover:underline text-lg font-semibold text-white mb-2">
+            <div className="flex h-full w-full flex-col hover:cursor-pointer">
+              <h3 className="mb-2 text-lg font-semibold text-white hover:underline">
                 {project.title}
               </h3>
-              <ul className="flex flex-wrap gap-1 mt-auto">
+              <ul className="mt-auto flex flex-wrap gap-1">
                 {project.tag.map((tag, i) => (
                   <li
-                    className="px-2 py-0.5 rounded-full text-xs bg-primary-500/20 text-purple-200 border border-purple-500/30"
+                    className="bg-primary-500/20 rounded-full border border-purple-500/30 px-2 py-0.5 text-xs text-purple-200"
                     key={i}
                   >
                     {tag}
@@ -72,7 +72,7 @@ const ProjectModal = () => {
       </div>
       <Dialog open={open} onOpenChange={setOpen}>
         {currentProject && (
-          <DialogContent className="  bg-gray-900 custom-scrollbar rounded-2xl shadow-xl max-w-4xl w-11/12 max-h-[85vh] overflow-y-auto">
+          <DialogContent className="custom-scrollbar max-h-[85vh] w-11/12 max-w-4xl overflow-y-auto rounded-2xl bg-gray-900 shadow-xl">
             <DialogHeader className="relative">
               <DialogTitle className="px-4 text-xl">
                 {currentProject.title}
@@ -81,34 +81,34 @@ const ProjectModal = () => {
               {/* Navigation Buttons */}
             </DialogHeader>
 
-            <DialogDescription className=" text-gray-200  flex flex-col md:flex-row gap-0 sm:gap-10 p-4">
-              <div className="flex-1 space-y-4 ">
-                <div className="relative ">
+            <DialogDescription className="flex flex-col gap-0 p-4 text-gray-200 sm:gap-10 md:flex-row">
+              <div className="flex-1 space-y-4">
+                <div className="relative">
                   {" "}
-                  <h3 className="text-lg font-semibold mb-4">Overview</h3>
+                  <h3 className="mb-4 text-lg font-semibold">Overview</h3>
                   <p>{currentProject.description}</p>
                   <p>{currentProject.fullDescription}</p>
                 </div>
 
-                <div className="absolute top-1/2 -translate-y-1/2 left-[-1] md:right-2">
+                <div className="absolute top-1/2 left-[-1] -translate-y-1/2 md:right-2">
                   <button
                     onClick={handlePrevProjectClick}
-                    className="shadow-md hover:shadow-lg p-1 text-purple-700 hover:text-gray-200"
+                    className="p-1 text-purple-700 shadow-md hover:text-gray-200 hover:shadow-lg"
                   >
                     <ChevronLeft />
                   </button>
                 </div>
-                <div className="absolute top-1/2 -translate-y-1/2 right-1 md:right-2">
+                <div className="absolute top-1/2 right-1 -translate-y-1/2 md:right-2">
                   <button
                     onClick={handleNextProjectClick}
-                    className="shadow-md hover:shadow-lg p-1 text-purple-700 hover:text-gray-200"
+                    className="p-1 text-purple-700 shadow-md hover:text-gray-200 hover:shadow-lg"
                   >
                     <ChevronRight />
                   </button>
                 </div>
                 <div>
                   <h4 className="font-semibold underline">Tech Stack</h4>
-                  <ul className="list-disc list-inside text-sm mt-2">
+                  <ul className="mt-2 list-inside list-disc text-sm">
                     {currentProject.techStack?.map((stack, i) => (
                       <li key={i}>{stack}</li>
                     ))}
@@ -117,44 +117,44 @@ const ProjectModal = () => {
 
                 <div>
                   <h4 className="font-semibold">Find out more:</h4>
-                  <div className="flex items-center gap-4 my-4">
+                  <div className="my-4 flex items-center gap-4">
                     <Link
                       href={currentProject.deployedSite}
-                      className="flex items-center gap-2 py-3 px-4 rounded-md text-xs bg-primary-500/20 text-purple-200 border border-purple-500/30 hover:border-purple-600"
+                      className="bg-primary-500/20 flex items-center gap-2 rounded-md border border-purple-500/30 px-4 py-3 text-xs text-purple-200 hover:border-purple-600"
                     >
-                      <FaGithub className="text-gray-200 font-bold" />
+                      <FaGithub className="font-bold text-gray-200" />
                       Live site
                     </Link>
                     <Link
                       href={currentProject.githubRepo}
-                      className="flex items-center gap-2 py-3 px-4 rounded-md text-xs bg-primary-500/20 text-purple-200 border border-purple-500/30 hover:border-purple-600"
+                      className="bg-primary-500/20 flex items-center gap-2 rounded-md border border-purple-500/30 px-4 py-3 text-xs text-purple-200 hover:border-purple-600"
                     >
-                      <IoRocketOutline className="text-gray-200 font-bold" />
+                      <IoRocketOutline className="font-bold text-gray-200" />
                       GitHub
                     </Link>
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col h-full w-full gap-10 md:flex-1">
-                <div className="relative w-full h-64">
+              <div className="flex h-full w-full flex-col gap-10 md:flex-1">
+                <div className="relative h-64 w-full">
                   {isLoading && (
-                    <div className="absolute inset-0 z-10 flex items-center justify-center bg-gray-800 rounded-xl">
-                      <Loader2 className="animate-spin text-purple-500 w-6 h-6" />
+                    <div className="absolute inset-0 z-10 flex items-center justify-center rounded-xl bg-gray-800">
+                      <Loader2 className="h-6 w-6 animate-spin text-purple-500" />
                     </div>
                   )}
                   <Image
                     onLoad={() => setIsLoading(false)}
                     fill
-                    className="object-contain h-auto"
+                    className="h-auto object-contain"
                     alt={currentProject.title}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     src={currentProject.image || ""}
                   />
                 </div>
-                <div className="hidden md:flex relative w-full h-96">
+                <div className="relative hidden h-96 w-full md:flex">
                   <Image
                     fill
-                    className={`object-contain h-auto transition-opacity duration-300 ${
+                    className={`h-auto object-contain transition-opacity duration-300 ${
                       isLoading ? "opacity-0" : "opacity-100"
                     }`}
                     alt={currentProject.title}

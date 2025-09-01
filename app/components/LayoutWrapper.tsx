@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Nav2 from "./Nav";
+import Nav from "./Nav";
 import Footer from "./Footer";
 
 export default function LayoutWrapper({
@@ -17,8 +17,8 @@ export default function LayoutWrapper({
   if (isAdmin) return <>{children}</>;
 
   return (
-    <div className="container mx-auto flex min-h-screen max-w-6xl flex-col">
-      <Nav2 />
+    <div className="container mx-auto flex h-screen max-w-6xl flex-col">
+      <Nav />
       <main className="flex-1">{children}</main>
       <Footer />
     </div>
