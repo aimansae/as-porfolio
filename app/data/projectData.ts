@@ -266,7 +266,7 @@ export const projects: ProjectType[] = [
     ],
     image: "/assets/modal.jpg",
     imageMobile: "/assets/openModal.pNG",
-    galleryImage: "/assets/modal-gallery.pNG",
+    galleryImage: "/assets/modal-gallery.png",
 
     tag: [
       { label: "React", icon: SiReact, className: "text-[#61DAFB]" },
@@ -415,7 +415,7 @@ export const projects: ProjectType[] = [
     ],
     image: "/assets/accordion.jpg",
     imageMobile: "/assets/accordion-mobile.jpg",
-    galleryImage: "/assets/accordion-gallery.PNG",
+    galleryImage: "/assets/accordion-gallery.png",
     tag: [
       { label: "React", icon: SiReact, className: "text-[#61DAFB]" },
       {
@@ -455,7 +455,7 @@ export const projects: ProjectType[] = [
     ],
     image: "/assets/signup-form.jpg",
     imageMobile: "/assets/signup-form-mobile.jpg",
-    galleryImage: "/assets/signup-form-gallery.PNG",
+    galleryImage: "/assets/signup-form-gallery.png",
     tag: [
       { label: "React", icon: SiReact, className: "text-[#61DAFB]" },
       {
