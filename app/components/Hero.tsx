@@ -16,7 +16,12 @@ const Hero = () => {
       y: e.clientY - divPosition.top,
     });
   };
+  const onTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const touch = e.touches[0];
 
+    setMousePos({ x: touch.clientX - rect.left, y: touch.clientY - rect.top });
+  };
   return (
     <div className="flex w-full flex-col items-center justify-center gap-2 px-4">
       <div className="flex items-center justify-center">
@@ -48,6 +53,9 @@ const Hero = () => {
           onMouseMove={onMouseMove}
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
+          onTouchStart={() => setHovered(true)}
+          onTouchMove={onTouchMove}
+          onTouchEnd={() => setHovered(false)}
         >
           <Image
             src="/assets/avatar.png"
