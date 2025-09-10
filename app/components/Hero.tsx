@@ -71,7 +71,7 @@ const Hero = () => {
 
           <Link
             href="/projects"
-            className="inline-flex w-max items-center gap-2 rounded-lg bg-[#993209] px-4 py-3 [font-family:var(--font-bungee)] text-sm tracking-wide text-white uppercase shadow-md transition hover:scale-105 hover:bg-[#bc4414] sm:text-base"
+            className="inline-flex w-max items-center gap-2 rounded-md bg-[#993209] px-4 py-3 [font-family:var(--font-bungee)] text-sm tracking-wide text-white uppercase shadow-md transition hover:scale-105 hover:bg-[#bc4414] sm:text-base"
           >
             <span className="tracking-wide">Projects</span>
             <IoIosArrowRoundForward className="animate-arrow text-xl font-bold" />
