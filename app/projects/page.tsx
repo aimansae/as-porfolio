@@ -1,10 +1,10 @@
 import React from "react";
-import Gallery from "../components/Gallery";
+import Projects from "../components/Projects";
 
 const page = () => {
   return (
     <div className="container mx-auto max-w-6xl">
-      <Gallery />
+      <Projects />
     </div>
   );
 };

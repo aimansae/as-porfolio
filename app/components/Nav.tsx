@@ -36,11 +36,11 @@ const Nav = () => {
   }, []);
   return (
     <nav
-      className={`relative z-50 container mx-auto flex max-w-6xl items-center justify-between border-gray-200 [font-family:var(--font-bungee)] text-gray-200 duration-200`}
+      className={`relative z-50 container mx-auto flex max-w-6xl items-center justify-between border-gray-200 p-4 [font-family:var(--font-bungee)] text-gray-200 duration-200 md:p-8 lg:p-4`}
     >
       <div className="z-50 flex w-full items-center justify-end md:hidden">
         <button
-          className="rounded px-4 py-2 hover:cursor-pointer hover:text-orange-500/80 active:border active:border-gray-600"
+          className="rounded hover:cursor-pointer hover:text-orange-500/80 active:border active:border-gray-600"
           onClick={() => setIsOpen((prev) => !prev)}
         >
           <AlignJustify size={28} />
@@ -77,7 +77,7 @@ const Nav = () => {
               />
             </button>
           </div>
-          <ul className="mt-6 flex flex-1 flex-col overflow-y-auto capitalize">
+          <ul className="flex flex-1 flex-col overflow-y-auto capitalize">
             {content.navLinks.map((link, i) => (
               <li
                 onClick={() => setIsOpen(false)}
@@ -95,7 +95,7 @@ const Nav = () => {
         </div>
       )}
       {/*Desktop menu*/}
-      <div className="hidden w-full items-center justify-between px-4 md:flex">
+      <div className="hidden w-full items-center justify-between md:flex">
         <Link href="/" className="text-md relative aspect-square h-12 w-12">
           <span className="text-2xl uppercase">a.s</span>
         </Link>

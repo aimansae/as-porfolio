@@ -20,12 +20,10 @@ export default function LayoutWrapper({
     <div className="flex min-h-dvh flex-col">
       {/* Header */}
       <Nav />
-
       {/* Main */}
-      <main className="flex flex-1 items-center justify-center px-4">
-        <div className="w-full max-w-6xl">{children}</div>
+      <main className="container mx-auto flex w-full max-w-6xl flex-1 justify-center">
+        {children}
       </main>
-
       {/* Footer */}
       <Footer />
     </div>

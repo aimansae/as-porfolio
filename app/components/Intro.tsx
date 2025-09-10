@@ -12,22 +12,16 @@ import {
 const Intro = () => {
   return (
     <section className={`flex flex-col gap-2`}>
-      <div className="hidden tracking-wider md:block">
-        <p className="[font-family:var(--font-roboto)] text-xs font-semibold sm:text-base">
-          I design and build responsive, user-friendly web interfaces using
-          modern technologies. Passionate about clean code and new learnings.
-        </p>
-      </div>
       {/* Tech stack */}
       <div className={`overflow-hidden`}>
-        <div className="flex items-center gap-2">
+        <div className="grid w-max grid-cols-3 gap-3 sm:grid-cols-6">
           <Link
             href="https://nextjs.org/"
             target="_blank"
             rel="noopener noreferrer"
             className="transition hover:scale-110"
           >
-            <SiNextdotjs className="h-4 w-4 text-white sm:h-6 sm:w-6" />
+            <SiNextdotjs className="h-6 w-6 text-white" />
           </Link>
 
           <Link
@@ -36,7 +30,7 @@ const Intro = () => {
             rel="noopener noreferrer"
             className="transition hover:scale-110"
           >
-            <SiTypescript className="h-4 w-4 text-blue-500 sm:h-6 sm:w-6" />
+            <SiTypescript className="h-6 w-6 text-blue-500" />
           </Link>
 
           <Link
@@ -45,7 +39,7 @@ const Intro = () => {
             rel="noopener noreferrer"
             className="transition hover:scale-110"
           >
-            <SiTailwindcss className="h-4 w-4 text-sky-400 sm:h-6 sm:w-6" />
+            <SiTailwindcss className="h-6 w-6 text-sky-400" />
           </Link>
           <Link
             href="https://react.dev/"
@@ -53,7 +47,7 @@ const Intro = () => {
             rel="noopener noreferrer"
             className="transition hover:scale-110"
           >
-            <SiReact className="h-4 w-4 text-cyan-400 sm:h-6 sm:w-6" />
+            <SiReact className="h-6 w-6 text-cyan-400" />
           </Link>
 
           <Link
@@ -62,7 +56,7 @@ const Intro = () => {
             rel="noopener noreferrer"
             className="transition hover:scale-110"
           >
-            <SiJavascript className="h-3 w-3 text-yellow-400 sm:h-5 sm:w-5" />
+            <SiJavascript className="h-6 w-6 text-yellow-400 sm:h-5 sm:w-5" />
           </Link>
 
           <Link
@@ -71,7 +65,7 @@ const Intro = () => {
             rel="noopener noreferrer"
             className="transition hover:scale-110"
           >
-            <SiHtml5 className="h-4 w-4 text-orange-500 sm:h-6 sm:w-6" />
+            <SiHtml5 className="h-6 w-6 text-orange-500" />
           </Link>
         </div>
       </div>

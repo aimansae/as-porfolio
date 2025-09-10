@@ -15,7 +15,7 @@ import {
 import { FaGithub } from "react-icons/fa";
 import { IoRocketOutline } from "react-icons/io5";
 
-const Gallery = () => {
+const Projects = () => {
   const [selectedProject, setSelectedProject] = useState<null | number>(null);
   const current = projects.find((p) => p.id === selectedProject);
   const [isOpen, setIsOpen] = useState(false);
@@ -38,11 +38,11 @@ const Gallery = () => {
     setShowMobileImg(false);
   };
   return (
-    <section className="flex flex-col gap-4 pb-4 md:gap-6">
-      <h3 className="[font-family:var(--font-bungee)] text-xl tracking-wide sm:text-2xl md:my-4">
+    <section className="flex-col p-4 md:p-8 lg:px-4 lg:py-8 flex">
+      <h3 className="py-4 [font-family:var(--font-bungee)] text-2xl tracking-wide sm:text-3xl">
         Projects
       </h3>
-      <div className="relative flex items-center justify-center">
+      <div className="relative flex items-center justify-center py-4">
         <div className="h-full w-full columns-2 space-y-3 sm:col-2 md:columns-3">
           {projects.map((project) => (
             <div
@@ -79,7 +79,6 @@ const Gallery = () => {
               )}
               <div className="absolute inset-0 flex items-center justify-center px-1 opacity-0 group-hover:opacity-100">
                 <span className="bg-gray-900/80 [font-family:var(--font-roboto)] text-[8px] font-bold tracking-wider underline sm:p-1 sm:text-xs">
-                  {" "}
                   {project.title}
                 </span>
               </div>
@@ -244,4 +243,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default Projects;

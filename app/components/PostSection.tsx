@@ -13,16 +13,16 @@ const PostSection = async () => {
   // });
 
   return (
-    <section className="flex-col space-y-8 p-4">
+    <section className="p-4 md:p-8 lg:px-4 lg:py-8">
       {/* Header */}
       <header>
-        <h2 className="[font-family:var(--font-bungee)] text-xl tracking-wide sm:py-4 sm:text-2xl md:gap-6 md:text-3xl">
-          Latest from the Blog
-        </h2>
+        <h3 className="py-4 [font-family:var(--font-bungee)] text-2xl tracking-wide sm:text-3xl">
+          Latest from the blog
+        </h3>
       </header>
 
       {/* Blog grid */}
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-1 gap-4 py-4 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post) => (
           <Link
             key={post.id}

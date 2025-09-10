@@ -297,5 +297,5 @@
 }
 
 .animateIcons {
-  animation: animateIcons 15s linear infinite;
+  animation: animateIcons 15s pulse infinite;
 }
