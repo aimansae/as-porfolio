@@ -220,7 +220,7 @@
 
 .custom-scrollbar {
   scrollbar-width: thin;
-  scrollbar-color: #9333ea transparent; /* For Firefox */
+  scrollbar-color: #f1620c transparent; /* For Firefox */
 }
 
 .custom-scrollbar::-webkit-scrollbar {
@@ -228,7 +228,7 @@
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #9333ea;
+  background-color: #f1620c;
   border-radius: 10px;
 }
 
@@ -304,6 +304,6 @@ h1 {
   @apply text-2xl tracking-wide sm:text-3xl;
 }
 
-.listStyle{
-@apply  rounded-xl bg-gradient-to-br from-gray-900/60 to-black/40 p-4 shadow-[0_0_10px_rgba(251,146,60,0.3)] backdrop-blur-md transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(251,146,60,0.5)]
+.listStyle {
+  @apply rounded-xl bg-gradient-to-br from-gray-900/60 to-black/40 p-4 shadow-[0_0_10px_rgba(251,146,60,0.3)] backdrop-blur-md transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_20px_rgba(251,146,60,0.5)];
 }

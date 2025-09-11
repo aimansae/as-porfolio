@@ -86,12 +86,12 @@ const Projects = () => {
       </div>
       {/*modal*/}
       <Dialog open={isOpen} onOpenChange={() => setIsOpen(false)}>
-        <DialogContent className="max-h-[85vh] w-11/12 max-w-4xl overflow-y-auto rounded-2xl bg-[#080808]/95 [font-family:var(--font-roboto)] text-gray-200 shadow-xl md:h-min">
+        <DialogContent className="custom-scrollbar max-h-[85vh] w-11/12 max-w-4xl overflow-y-auto rounded-2xl bg-[#080808]/95 [font-family:var(--font-roboto)] text-gray-200 shadow-xl md:h-min">
           {current ? (
             <div>
               {/* Header */}
               <DialogHeader className="relative mb-6">
-                <DialogTitle className="flex items-center [font-family:var(--font-bungee)] text-2xl tracking-wide text-gray-200 drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] sm:text-3xl md:text-4xl">
+                <DialogTitle className="flex items-center [font-family:var(--font-bungee)] text-2xl tracking-wide text-gray-200 sm:text-3xl md:text-4xl">
                   <Link
                     target="_blank"
                     rel="noopener noreferrer"
@@ -220,13 +220,13 @@ const Projects = () => {
                   <div className="mt-3 grid w-max grid-cols-2 gap-4">
                     <Link
                       href={current.deployedSite}
-                      className="flex items-center gap-1 rounded-md bg-[#b93a08]/80 px-4 py-2 text-sm font-medium text-white shadow-[0_0_10px_rgba(255,255,255,0.6)] transition hover:bg-[#b93a08] sm:text-base"
+                      className="flex items-center gap-1 rounded-md bg-[#b93a08]/80 px-4 py-2 text-sm font-medium text-white transition hover:bg-[#b93a08] sm:text-base"
                     >
                       <IoRocketOutline className="whitespace-nowrap" /> Live
                     </Link>
                     <Link
                       href={current.githubRepo}
-                      className="flex items-center gap-1 rounded-md border border-gray-700 bg-gray-700 px-4 py-2 text-sm font-medium text-white shadow-[0_0_10px_rgba(255,255,255,0.6)] transition hover:bg-gray-800 sm:text-base"
+                      className="flex items-center gap-1 rounded-md border border-gray-700 bg-gray-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-gray-800 sm:text-base"
                     >
                       <FaGithub className=" " /> GitHub
                     </Link>
