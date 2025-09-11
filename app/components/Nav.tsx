@@ -36,7 +36,7 @@ const Nav = () => {
   }, []);
   return (
     <nav
-      className={`relative z-50 container mx-auto flex max-w-6xl items-center justify-between border-gray-200 p-4 [font-family:var(--font-bungee)] text-gray-200 duration-200 md:p-8 lg:p-4`}
+      className={`relative z-50 container mx-auto flex max-w-6xl items-center justify-between border-gray-200 p-2 [font-family:var(--font-bungee)] text-gray-200 duration-200 md:p-4`}
     >
       <div className="z-50 flex w-full items-center justify-end md:hidden">
         <button

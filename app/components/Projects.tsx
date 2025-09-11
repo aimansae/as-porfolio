@@ -38,11 +38,9 @@ const Projects = () => {
     setShowMobileImg(false);
   };
   return (
-    <section className="flex-col p-4 md:p-8 lg:px-4 lg:py-8 flex">
-      <h3 className="py-4 [font-family:var(--font-bungee)] text-2xl tracking-wide sm:text-3xl">
-        Projects
-      </h3>
-      <div className="relative flex items-center justify-center py-4">
+    <section className="flex flex-col p-2 md:p-4">
+      <h1>Projects</h1>
+      <div className="relative flex items-center justify-center py-6">
         <div className="h-full w-full columns-2 space-y-3 sm:col-2 md:columns-3">
           {projects.map((project) => (
             <div

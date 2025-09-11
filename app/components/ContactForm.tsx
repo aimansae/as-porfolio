@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 const ContactForm = () => {
   const router = useRouter();
-  const text = "et in touch";
+  const text = "et in touch!";
   const [index, setIndex] = useState(0);
   const [loading, setLoading] = useState(false);
 
@@ -90,13 +90,13 @@ const ContactForm = () => {
     <section className="p-4 md:p-8 lg:px-4 lg:py-8">
       {/* Header */}
       <header>
-        <h3 className="py-4 [font-family:var(--font-bungee)] text-2xl tracking-wide sm:text-3xl">
+        <h1>
           <span className="block">{displayedText}</span>
-        </h3>
+        </h1>
       </header>
 
-      <div className="bg-gradient-to-br from-gray-900/60 to-black/40 py-4 backdrop-blur-md transition-all duration-500">
-        <h2 className="my-4 [font-family:var(--font-bungee)] text-xl tracking-wide sm:text-2xl">
+      <div className="py-6">
+        <h2 className="py-4 [font-family:var(--font-bungee)] text-xl tracking-wide sm:text-2xl">
           Let’s build something great
         </h2>
         <p className="my-4 text-sm font-semibold tracking-wide text-gray-300 sm:text-base">
@@ -139,7 +139,7 @@ const ContactForm = () => {
                   name="name"
                   id="name"
                   placeholder="Your Name"
-                  className="w-full rounded-lg border border-orange-400/40 bg-transparent px-3 py-2 text-white placeholder-gray-400 transition transition-colors hover:border-orange-500 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 focus:outline-none sm:px-4 sm:py-3"
+                  className="w-full rounded-lg border border-orange-400/40 bg-transparent bg-gradient-to-br from-gray-900/60 to-black/40 p-6 px-3 py-2 text-white placeholder-gray-400 shadow-[0_0_10px_rgba(251,146,60,0.3)] backdrop-blur-md transition-colors duration-500 hover:border-orange-500 hover:shadow-[0_0_15px_rgba(218,88,36,0.6)] focus:border-orange-500 focus:ring-1 focus:ring-orange-500 focus:outline-none sm:px-4 sm:py-3"
                 />
               </div>
               <div className="w-full">
@@ -157,7 +157,7 @@ const ContactForm = () => {
                   name="email"
                   id="email"
                   placeholder="you@example.com"
-                  className="w-full rounded-lg border border-orange-400/40 bg-transparent px-3 py-2 text-white placeholder-gray-400 transition-colors hover:border-orange-500 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 focus:outline-none sm:px-4 sm:py-3"
+                  className="hover:shadow-[0_0_15px_rgba(218,88,36,0.6)]w-full w-full rounded-lg border border-orange-400/40 bg-transparent bg-gradient-to-br from-gray-900/60 to-black/40 p-6 px-3 py-2 text-white placeholder-gray-400 shadow-[0_0_10px_rgba(251,146,60,0.3)] backdrop-blur-md transition-colors duration-500 hover:border-orange-500 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 focus:outline-none sm:px-4 sm:py-3"
                 />
               </div>
             </div>
@@ -177,7 +177,7 @@ const ContactForm = () => {
                 id="message"
                 name="message"
                 placeholder="Type your message..."
-                className="h-28 w-full rounded-lg border border-orange-400/40 bg-transparent px-3 py-2 text-white placeholder-gray-400 transition hover:border-orange-500 focus:outline-none sm:px-4 sm:py-3"
+                className="h-28 w-full rounded-lg border border-orange-400/40 bg-transparent bg-gradient-to-br from-gray-900/60 to-black/40 p-6 px-3 py-2 text-white placeholder-gray-400 shadow-[0_0_10px_rgba(251,146,60,0.3)] backdrop-blur-md transition transition-all duration-500 hover:border-orange-500 hover:shadow-[0_0_15px_rgba(218,88,36,0.6)] focus:outline-none sm:px-4 sm:py-3"
               ></textarea>
             </div>
 
