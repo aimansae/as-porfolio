@@ -59,10 +59,10 @@ const AboutPage = () => {
 
       {/* What's Next */}
       <section className="py-6">
-        <h2 className="py-6 [font-family:var(--font-bungee)] text-xl tracking-wide sm:text-2xl">
+        <h2 className="[font-family:var(--font-bungee)] text-xl tracking-wide sm:text-2xl">
           What’s Next?
         </h2>
-        <p className="text-sm font-semibold tracking-wide text-gray-300 sm:text-base">
+        <p className="py-6 text-sm font-semibold tracking-wide text-gray-300 sm:text-base">
           I’m ready to join the industry as a Junior Frontend Developer,
           collaborate on real-world projects, and keep learning every day. It’s
           time to step out of my comfort zone and grow even further.

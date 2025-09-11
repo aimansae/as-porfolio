@@ -52,7 +52,7 @@ const Projects = () => {
               className="group relative cursor-pointer break-inside-avoid overflow-hidden rounded-md border border-orange-400/60 shadow-[0_0_10px_rgba(251,146,60,0.5)] transition-all duration-500 hover:border-orange-500 hover:shadow-[0_0_15px_rgba(168,85,247,0.7)]"
             >
               {loadGalleryImg[project.id] !== false && (
-                <div className="absolute inset-0 z-10 flex items-center justify-center bg-gray-900/80">
+                <div className="absolute inset-0 z-10 flex items-center justify-center from-gray-900/60 to-black/40">
                   <Loader2 className="h-6 w-6 animate-spin text-orange-500" />
                 </div>
               )}
