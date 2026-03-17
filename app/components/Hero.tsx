@@ -1,118 +1,77 @@
-"use client";
-import React, { useState } from "react";
-import Image from "next/image";
-import { IoIosArrowRoundForward } from "react-icons/io";
-import Link from "next/link";
-import Intro from "../components/Intro";
+// import Image from "next/image";
+// import { ArrowRight } from "lucide-react";
+// import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+// import { SiNextdotjs, SiTypescript, SiTailwindcss, SiJavascript } from "react-icons/si";
 
-const Hero = () => {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [hovered, setHovered] = useState(false);
+// export default function Hero() {
+//   return (
+//     <section className="relative min-h-screen bg-black text-white">
+//       {/* Background glow */}
+    
+//       <div className="relative mx-auto grid min-h-screen max-w-7xl items-center px-6 pt-28 pb-12 md:grid-cols-2 md:px-10 md:pt-24">
+//         {/* LEFT CONTENT */}
+//         <div className="z-20 order-2 mt-[-5rem] md:order-1 md:mt-0 md:max-w-xl">
+//           <p className="mb-3 text-lg text-white/75 md:text-2xl">
+//             Hi, I&apos;m <span className="font-bold text-white">Aiman</span>👋
+//           </p>
 
-  const onMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const divPosition = e.currentTarget.getBoundingClientRect();
-    setMousePos({
-      x: e.clientX - divPosition.left,
-      y: e.clientY - divPosition.top,
-    });
-  };
-  const onTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const touch = e.touches[0];
+//           <h1 className="max-w-md text-5xl font-extrabold leading-tight md:text-7xl">
+//             Junior Frontend Developer
+//           </h1>
 
-    setMousePos({ x: touch.clientX - rect.left, y: touch.clientY - rect.top });
-  };
-  return (
-    <div className="flex w-full flex-col">
-      {/* ---------- Mobile Layout (background image) ---------- */}
-      <div className="relative flex h-full flex-col justify-around bg-black/40 bg-[url('/assets/avatar.png')] bg-contain bg-right bg-no-repeat p-4 bg-blend-multiply transition-colors hover:bg-black/10 md:hidden">
-        <div className="w-1/2">
-          <h1 className="[font-family:var(--font-bungee)] text-3xl tracking-wide sm:text-4xl">
-            aiman saeed
-          </h1>
-        </div>
+//           <p className="mt-5 max-w-md text-base leading-7 text-white/75 md:text-xl">
+//             I build accessible, responsive web apps with React &amp; Next.js
+//           </p>
 
-        <h2 className="[font-family:var(--font-bungee)] text-2xl leading-relaxed tracking-wide sm:text-4xl">
-          Junior <br /> Frontend <br /> Developer
-        </h2>
+//           <div className="mt-6 flex items-center gap-3">
+//             <div className="rounded-xl border border-white/10 bg-white/5 p-3 text-white/80">
+//               <SiNextdotjs size={22} />
+//             </div>
+//             <div className="rounded-xl border border-white/10 bg-white/5 p-3 text-blue-400">
+//               <SiTypescript size={22} />
+//             </div>
+//             <div className="rounded-xl border border-white/10 bg-white/5 p-3 text-cyan-400">
+//               <SiTailwindcss size={22} />
+//             </div>
+//             <div className="rounded-xl border border-white/10 bg-white/5 p-3 text-yellow-400">
+//               <SiJavascript size={22} />
+//             </div>
+//           </div>
 
-        <Intro />
+//           <div className="mt-8">
+//             <button className="group inline-flex items-center gap-3 rounded-2xl bg-gradient-to-r from-orange-700 to-orange-500 px-6 py-4 text-lg font-bold shadow-[0_0_30px_rgba(255,115,0,0.35)] transition hover:scale-[1.02]">
+//               View Projects
+//               <ArrowRight className="transition group-hover:translate-x-1" />
+//             </button>
+//           </div>
 
-        <div className="w-1/2">
-          <Link
-            href="/projects"
-            className="inline-flex items-center gap-2 rounded-lg bg-[#bc4414] px-4 py-3 [font-family:var(--font-bungee)] text-sm tracking-wide text-white uppercase shadow-md transition hover:scale-105 hover:bg-[#993209] sm:text-base"
-          >
-            <span className="tracking-wide">Projects</span>
-            <IoIosArrowRoundForward className="animate-arrow text-xl font-bold" />
-          </Link>
-        </div>
-      </div>
+//           <div className="mt-8 hidden items-center gap-4 md:flex">
+//             <a href="#" className="text-white/80 hover:text-orange-400">
+//               <FaGithub size={22} />
+//             </a>
+//             <a href="#" className="text-white/80 hover:text-orange-400">
+//               <FaLinkedin size={22} />
+//             </a>
+//             <a href="#" className="text-white/80 hover:text-orange-400">
+//               <FaEnvelope size={22} />
+//             </a>
+//           </div>
+//         </div>
 
-      {/* ---------- Desktop Layout (side by side) ---------- */}
-      <div className="hidden w-full items-center justify-between px-8 md:flex lg:mx-auto lg:max-w-3xl lg:gap-8">
-        {/* Left content */}
-        <div className="z-40 flex w-1/2 flex-col gap-6 p-4">
-          <h1 className="[font-family:var(--font-bungee)] text-4xl tracking-wide">
-            aiman saeed
-          </h1>
-
-          <h2 className="[font-family:var(--font-bungee)] text-2xl leading-relaxed tracking-wide">
-            Junior Frontend <br /> Developer
-          </h2>
-
-          <p className="[font-family:var(--font-roboto)] font-semibold">
-            I design and build responsive, <br />
-            user-friendly web interfaces <br />
-            using modern technologies.
-          </p>
-
-          <Intro />
-
-          <Link
-            href="/projects"
-            className="inline-flex w-max items-center gap-2 rounded-md bg-[#993209] px-4 py-3 [font-family:var(--font-bungee)] text-sm tracking-wide text-white uppercase shadow-md transition hover:scale-105 hover:bg-[#bc4414] sm:text-base"
-          >
-            <span className="tracking-wide">Projects</span>
-            <IoIosArrowRoundForward className="animate-arrow text-xl font-bold" />
-          </Link>
-        </div>
-
-        {/* Right image */}
-        <div
-          className="relative z-20 flex h-[70vh] w-1/2 overflow-hidden"
-          onMouseMove={onMouseMove}
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
-          onTouchStart={() => setHovered(true)}
-          onTouchMove={onTouchMove}
-          onTouchEnd={() => setHovered(false)}
-        >
-          <Image
-            src="/assets/avatar.png"
-            alt="avatar"
-            fill
-            priority
-            sizes="(max-width: 1200px) 50vw, 600px"
-            className={`mask object-contain transition duration-500 ${
-              hovered ? "" : "brightness-75"
-            }`}
-          />
-          {hovered && (
-            <div
-              className="absolute inset-0"
-              style={{
-                background: `radial-gradient(circle 40px at ${mousePos.x}px ${mousePos.y}px,
-                rgba(255,255,255,1) 0%,
-                rgba(255,255,255,0.8) 60%,
-                rgba(255,255,255,0) 100%)`,
-                mixBlendMode: "overlay",
-              }}
-            />
-          )}
-        </div>
-      </div>
-    </div>
-  );
-};
-export default Hero;
+//         {/* RIGHT IMAGE */}
+//         <div className="relative order-1 flex items-center justify-center md:order-2">
+//           <div className="relative h-[520px] w-[320px] sm:h-[620px] sm:w-[380px] md:h-[720px] md:w-[500px]">
+//             <div className="absolute inset-0 rounded-full bg-orange-500/20 blur-3xl" />
+//             <Image
+//               src="/assets/backgroundImg.png"
+//               alt="Portrait"
+//               fill
+//               priority
+//               className="object-contain drop-shadow-[0_0_40px_rgba(255,120,0,0.35)]"
+//             />
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }

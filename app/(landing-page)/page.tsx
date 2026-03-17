@@ -1,9 +1,8 @@
-import Hero from "../components/Hero";
+import HeroSection from "../components/HeroSection";
 
-export default function Home() {
+ 
+export default function HomePage() {
   return (
-    <div className="container mx-auto flex max-w-6xl">
-      <Hero />
-    </div>
+    <HeroSection/>
   );
 }

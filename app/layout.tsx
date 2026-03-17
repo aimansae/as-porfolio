@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Poppins, Bungee, Roboto } from "next/font/google";
 import "../app/globals.css";
 import LayoutWrapper from "./components/LayoutWrapper";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -33,9 +35,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${poppins.variable} ${bungee.variable} ${roboto.variable} flex min-h-screen flex-col bg-black text-slate-50 antialiased`}
+        className={` ${poppins.variable} ${bungee.variable} ${roboto.variable} flex min-h-dvh flex-col bg-black text-slate-50 antialiased`}
       >
-        <LayoutWrapper>{children}</LayoutWrapper>
+        <Navbar />
+        {/* Main */}
+        <main className="flex-1">{children}</main>
+         <Footer />
       </body>
     </html>
   );
